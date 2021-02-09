@@ -1,7 +1,10 @@
 import { takeLatest, put, call, take, select } from 'redux-saga/effects'
 import * as t from '@/modules/app/actions'
 
-export function* initFlow(action: any) {}
+function* initFlow(action: any) {
+  console.log('INIT FLOW OF SAGA')
+  alert('wtf')
+}
 
 function* initWatcher() {
   yield takeLatest(t.INIT_APP, initFlow)
