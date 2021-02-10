@@ -1,7 +1,7 @@
-import { fork, spawn } from 'redux-saga/effects'
-import app_init_watcher from '@/modules/app/init.saga'
+import { fork, spawn, all } from 'redux-saga/effects'
+import initWatcher from '@/modules/app/init.saga'
 
 function* rootSagas() {
-  yield [app_init_watcher]
+  yield all([initWatcher()])
 }
 export default rootSagas

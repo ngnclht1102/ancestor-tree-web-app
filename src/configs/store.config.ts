@@ -8,7 +8,7 @@ import Reactotron from '@/configs/reactoron.config'
 var store: any = null
 
 const sagaMiddleware = createSagaMiddleware()
-const middlewares = [...midlewares, sagaMiddleware]
+const middlewares = [sagaMiddleware, ...midlewares]
 
 const configureStore = () => {
   if (store) return store
