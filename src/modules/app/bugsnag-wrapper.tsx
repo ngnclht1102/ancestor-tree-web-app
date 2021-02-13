@@ -11,18 +11,19 @@ Bugsnag.start({
 // @ts-ignore
 const ErrorBoundary = Bugsnag.getPlugin('react').createErrorBoundary(React)
 
-export default () => {
+const ErrorView = () => {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>There is an error!</Text>
+    </View>
+  )
+}
+
+// @ts-ignore
+module.exports = () => {
   return (
     <ErrorBoundary FallbackComponent={ErrorView}>
       <AppWithReduxWrapper />
     </ErrorBoundary>
-  )
-}
-
-const ErrorView = () => {
-  return (
-    <View style={{ flex: 1 }}>
-      <Text>There is an error!</Text>
-    </View>
   )
 }

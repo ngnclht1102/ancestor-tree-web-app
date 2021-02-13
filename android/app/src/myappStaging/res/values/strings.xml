@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Beta</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">
+        @string/CODEPUSH_ANDROID_KEY
+    </string>
+
+</resources>

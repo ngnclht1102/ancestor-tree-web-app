@@ -29,6 +29,8 @@
 			<key>apiKey</key>
 			<string>$(BUGSNAG_API_KEY)</string>
 	</dict>
+	<key>CodePushDeploymentKey</key>
+	<string>$(CODEPUSH_IOS_KEY)</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
