@@ -3,6 +3,8 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <Bugsnag/Bugsnag.h>
+
 
 #if DEBUG
 #import <FlipperKit/FlipperClient.h>
@@ -24,13 +26,12 @@ static void InitializeFlipper(UIApplication *application) {
 #endif
 
 @implementation AppDelegate
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #if DEBUG
   InitializeFlipper(application);
 #endif
-
+  [Bugsnag start];
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"MyApp"

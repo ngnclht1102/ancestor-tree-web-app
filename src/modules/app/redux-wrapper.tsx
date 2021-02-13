@@ -15,7 +15,7 @@ import * as eva from '@eva-design/eva'
 import App from './app'
 import { myTheme } from './themes'
 
-export default (): React.ReactFragment => {
+export default () => {
   return (
     <Provider store={store}>
       <IconRegistry icons={EvaIconsPack} />

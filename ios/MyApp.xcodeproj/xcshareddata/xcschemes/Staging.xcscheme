@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1130"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "#!/bin/sh&#10;# exposing values to Build Settings and Info.plist.&#10;&quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb&quot; &quot;${SRCROOT}/..&quot; &quot;${SRCROOT}/tmp.xcconfig&quot;&#10;&#10;# load configuration&#10;APP=&quot;myapp&quot;&#10;ENVIRONMENT=&quot;staging&quot;&#10;&#10;CONFIG_FILE=&quot;.$APP.$ENVIRONMENT.env&quot;&#10;RESOURCE_FOLDER=&quot;$APP-$ENVIRONMENT&quot;&#10;&#10;#copy config for rnconfig&#10;echo $CONFIG_FILE &gt; /tmp/envfile&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+                     BuildableName = "MyApp.app"
+                     BlueprintName = "MyApp"
+                     ReferencedContainer = "container:MyApp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,9 +32,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "MyApp-tvOS.app"
-               BlueprintName = "MyApp-tvOS"
+               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+               BuildableName = "MyApp.app"
+               BlueprintName = "MyApp"
                ReferencedContainer = "container:MyApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +50,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "MyApp-tvOSTests.xctest"
-               BlueprintName = "MyApp-tvOSTests"
+               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
+               BuildableName = "MyAppTests.xctest"
+               BlueprintName = "MyAppTests"
                ReferencedContainer = "container:MyApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -54,9 +72,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "MyApp-tvOS.app"
-            BlueprintName = "MyApp-tvOS"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "MyApp.app"
+            BlueprintName = "MyApp"
             ReferencedContainer = "container:MyApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,9 +89,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "MyApp-tvOS.app"
-            BlueprintName = "MyApp-tvOS"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "MyApp.app"
+            BlueprintName = "MyApp"
             ReferencedContainer = "container:MyApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -10,11 +10,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@bugsnag/plugin-react": "^7.6.0",
+    "@bugsnag/react-native": "^7.6.1",
     "@eva-design/eva": "2.0.0",
     "@react-native-async-storage/async-storage": "^1.13.4",
     "@ui-kitten/components": "5.0.0",
     "@ui-kitten/eva-icons": "5.0.0",
-    "bugsnag-react-native": "^2.23.10",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-config": "^1.4.2",
