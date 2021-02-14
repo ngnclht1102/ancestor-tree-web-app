@@ -1,3 +1,3 @@
 import bugsnagLogging from './bugsnag-logging'
 
-export default []
+export default [bugsnagLogging]

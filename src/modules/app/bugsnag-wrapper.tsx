@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react'
 import { ImageProps, StyleSheet, View, Text } from 'react-native'
-import AppWithReduxWrapper from './redux-wrapper'
+import store from '@/configs/store.config'
 import Bugsnag from '@bugsnag/react-native'
 import BugsnagPluginReact from '@bugsnag/plugin-react'
+import AppWithReduxWrapper from './redux-wrapper'
 
 Bugsnag.start({
-  plugins: [new BugsnagPluginReact()]
+  plugins: [new BugsnagPluginReact()],
+  onError: function (event) {
+    event.addMetadata('store', store.getState())
+    return true
+  }
 })
 
 // @ts-ignore

@@ -1,13 +1,13 @@
-import { bugsnag } from '../errors'
+import Bugsnag from '@bugsnag/react-native'
 
-const logger = (store) => (next) => (action) => {
+const logger = (store: any) => (next: any) => (action: any) => {
   try {
-    bugsnag().leaveBreadcrumb(action.type, action)
+    Bugsnag.leaveBreadcrumb(action.type, action)
     let result = next(action)
     return result
   } catch (err) {
     console.log('Caught an exception!', err)
-    bugsnag().notify(err)
+    Bugsnag.notify(err)
   }
 }
 

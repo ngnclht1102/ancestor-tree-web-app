@@ -7,15 +7,14 @@ import '@/configs/env.config'
 import * as eva from '@eva-design/eva'
 import { myTheme } from './themes'
 import { INIT_APP } from './actions'
+import { createAction } from '@/modules/app/utils/create-action'
 
 export default () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch({
-        type: INIT_APP
-      })
+      dispatch(createAction(INIT_APP))
     }, 1000)
   }, [])
   return (
