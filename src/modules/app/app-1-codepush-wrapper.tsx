@@ -115,7 +115,7 @@ class CodepushWrapper extends React.Component<any, State> {
       status == codePush.SyncStatus.UPDATE_IGNORED ||
       status == codePush.SyncStatus.UNKNOWN_ERROR
     ) {
-      const App = require('../app/bugsnag-wrapper')
+      const App = require('../app/app-2-bugsnag-wrapper')
       return <App />
     }
     return <Splash fromCodepushWrapper={true}>{content}</Splash>

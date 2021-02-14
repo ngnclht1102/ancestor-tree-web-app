@@ -34,7 +34,7 @@ const SplashScreen = (props: SplashScreenProps) => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
-      <Text style={styles.txt}>Spine CarePath</Text>
+      <Text style={styles.txt}>MY APP</Text>
       <View style={styles.bottomView}>
         <Text style={styles.version}>
           {DeviceInfo.getVersion()}.{state.label ? state.label : ''}

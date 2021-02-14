@@ -3,7 +3,7 @@ import { ImageProps, StyleSheet, View, Text } from 'react-native'
 import store from '@/configs/store.config'
 import Bugsnag from '@bugsnag/react-native'
 import BugsnagPluginReact from '@bugsnag/plugin-react'
-import AppWithReduxWrapper from './redux-wrapper'
+import AppWithReduxWrapper from './app-3-redux-wrapper'
 
 Bugsnag.start({
   plugins: [new BugsnagPluginReact()],
