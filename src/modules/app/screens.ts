@@ -1,0 +1,2 @@
+export const SCREEN_SPLASH = 'SCREEN_SPLASH'
+export const SCREEN_HOME = 'SCREEN_HOME'

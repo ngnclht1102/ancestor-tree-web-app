@@ -5,31 +5,21 @@ import { EvaIconsPack } from '@ui-kitten/eva-icons'
 import { useDispatch } from 'react-redux'
 import '@/configs/env.config'
 import * as eva from '@eva-design/eva'
-import { myTheme } from './themes'
-import { INIT_APP } from './actions'
 import { createAction } from '@/modules/app/utils/create-action'
+import Screens from './app-screens'
+import { INIT_APP } from './actions'
 
 export default () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(createAction(INIT_APP))
-    }, 1000)
+    dispatch(createAction(INIT_APP))
   }, [])
+
   return (
-    <Layout style={styles.container}>
-      <Text style={styles.text} category="h1">
-        Welcome to UI Kitten 😻
-      </Text>
-      <Text style={styles.text} category="s1">
-        Start with editing App.js to configure your App
-      </Text>
-      <Text style={styles.text} appearance="hint">
-        For example, try changing theme to Dark by using eva.dark
-      </Text>
-      <Button style={styles.likeButton}>LIKE</Button>
-    </Layout>
+    <>
+      <Screens />
+    </>
   )
 }
 
