@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ImageProps, StyleSheet, SafeAreaView } from 'react-native'
+import { ImageProps, StyleSheet } from 'react-native'
 import {
   Button,
   Icon,
@@ -10,6 +10,7 @@ import {
   TopNavigation,
   TopNavigationAction
 } from '@ui-kitten/components'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
 import { useDispatch } from 'react-redux'
 import '@/configs/env.config'

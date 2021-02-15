@@ -8,6 +8,7 @@ import {
   Layout,
   Text
 } from '@ui-kitten/components'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
 import { Provider, useDispatch } from 'react-redux'
 import * as eva from '@eva-design/eva'
@@ -19,7 +20,7 @@ const colorScheme = Appearance.getColorScheme()
 
 export default () => {
   return (
-    <>
+    <SafeAreaProvider>
       <IconRegistry icons={EvaIconsPack} />
       <ApplicationProvider
         {...eva}
@@ -27,6 +28,6 @@ export default () => {
       >
         <App />
       </ApplicationProvider>
-    </>
+    </SafeAreaProvider>
   )
 }

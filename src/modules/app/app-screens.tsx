@@ -16,17 +16,9 @@ const RootStack = createStackNavigator()
 
 const MainStackScreens = () => {
   return (
-    <MainStack.Navigator>
-      <MainStack.Screen
-        options={{ headerShown: false }}
-        name={sc.SCREEN_SPLASH}
-        component={SplashScreen}
-      />
-      <MainStack.Screen
-        options={{ headerShown: false }}
-        name={sc.SCREEN_HOME}
-        component={HomeScreen}
-      />
+    <MainStack.Navigator headerMode="none">
+      <MainStack.Screen name={sc.SCREEN_SPLASH} component={SplashScreen} />
+      <MainStack.Screen name={sc.SCREEN_HOME} component={HomeScreen} />
     </MainStack.Navigator>
   )
 }
