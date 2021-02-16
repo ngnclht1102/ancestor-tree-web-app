@@ -14,9 +14,12 @@ import HomeScreen from '@/modules/home'
 const MainStack = createStackNavigator()
 const RootStack = createStackNavigator()
 
-const MainStackConfig: { screens: any } = { screens: {} }
-MainStackConfig.screens[sc.SCREEN_SPLASH] = sc.SCREEN_SPLASH
-MainStackConfig.screens[sc.SCREEN_HOME] = sc.SCREEN_HOME
+const MainStackConfig: { path: string; screens: any } = {
+  path: '',
+  screens: {}
+}
+MainStackConfig.screens[sc.SCREEN_SPLASH] = 'splash'
+MainStackConfig.screens[sc.SCREEN_HOME] = 'home'
 
 const linking = {
   prefixes: ['http://localhost:8080', 'myapp://'],
