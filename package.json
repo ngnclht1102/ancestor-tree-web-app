@@ -19,6 +19,7 @@
     "@react-navigation/stack": "^5.14.2",
     "@ui-kitten/components": "5.0.0",
     "@ui-kitten/eva-icons": "5.0.0",
+    "moment": "^2.29.1",
     "react": "16.11.0",
     "react-dom": "^17.0.1",
     "react-native": "0.62.2",
