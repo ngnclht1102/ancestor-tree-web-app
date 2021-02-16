@@ -1,3 +1,4 @@
+import { Platform } from 'react-native'
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import rootReducers from '@/modules/app/reducers'
@@ -17,11 +18,14 @@ const configureStore = () => {
   if (__DEV__) {
     const composeWithDevTools = require('redux-devtools-extension')
       .composeWithDevTools
-    enhancers = composeWithDevTools(
-      applyMiddleware(...middlewares),
-      // @ts-ignore
-      Reactotron.createEnhancer()
-    )
+    enhancers =
+      Platform.OS !== 'web'
+        ? composeWithDevTools(
+            applyMiddleware(...middlewares),
+            // @ts-ignore
+            Reactotron.createEnhancer()
+          )
+        : composeWithDevTools(applyMiddleware(...middlewares))
   } else {
     // production env - exclude dev tools
     enhancers = compose(applyMiddleware(...middlewares))
