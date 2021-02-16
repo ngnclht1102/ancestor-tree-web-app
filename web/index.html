@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>APP</title>
-    <link href="./main.css" rel="stylesheet" />
+    <style>
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #app-root {
+        display: flex;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <div id="app-root"></div>

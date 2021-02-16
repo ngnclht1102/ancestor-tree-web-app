@@ -14,6 +14,17 @@ import HomeScreen from '@/modules/home'
 const MainStack = createStackNavigator()
 const RootStack = createStackNavigator()
 
+const MainStackConfig: { screens: any } = { screens: {} }
+MainStackConfig.screens[sc.SCREEN_SPLASH] = sc.SCREEN_SPLASH
+MainStackConfig.screens[sc.SCREEN_HOME] = sc.SCREEN_HOME
+
+const linking = {
+  prefixes: ['http://localhost:8080', 'myapp://'],
+  screens: {
+    Main: MainStackConfig
+  }
+}
+
 const MainStackScreens = () => {
   return (
     <MainStack.Navigator headerMode="none">
@@ -32,6 +43,7 @@ export default function Root() {
 
   return (
     <NavigationContainer
+      linking={linking}
       ref={navigationRef}
       onReady={() => {
         isReadyRef.current = true
