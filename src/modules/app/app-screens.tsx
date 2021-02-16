@@ -10,6 +10,8 @@ import {
 
 import SplashScreen from '@/modules/app/splash'
 import HomeScreen from '@/modules/home'
+import SignIn from '@/modules/authentication/signin'
+import { SCREEN_AUTHENTICATION_SIGNIN } from '../authentication/screens'
 
 const MainStack = createStackNavigator()
 const RootStack = createStackNavigator()
@@ -32,6 +34,10 @@ const MainStackScreens = () => {
   return (
     <MainStack.Navigator headerMode="none">
       <MainStack.Screen name={sc.SCREEN_SPLASH} component={SplashScreen} />
+      <MainStack.Screen
+        name={SCREEN_AUTHENTICATION_SIGNIN}
+        component={SignIn}
+      />
       <MainStack.Screen name={sc.SCREEN_HOME} component={HomeScreen} />
     </MainStack.Navigator>
   )
